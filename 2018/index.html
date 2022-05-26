@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="authoring-tool" content="Adobe_Animate_CC">
+	<title>LinkECard</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css" media="screen">
+        html {
+					height: 100%;
+				}
+        body {
+           height: 100%;
+					 margin:0px;
+					 padding:0px;
+					 overflow:hidden;
+					 background-color:#F3F2EE;
+        }
+				#ecardFrame {
+					overflow:hidden;
+					overflow-x:hidden;
+					overflow-y:hidden;
+					height:90%;
+					width:100%;
+					top:0px;
+					left:50%;
+					right:0px;
+					bottom:0px;
+					background-position: center;
+					background-color:#F3F2EE;
+				}
+				#logoCon {
+					height:8%;
+					margin:15px 0 0 15px;
+					background: url('images/Link_Logo.svg?ver=1') no-repeat;
+					background-size:contain;
+				}
+				#footerCon {
+					height:12%;
+					clear:both;
+				}
+    </style>
+		<script type="text/javascript">
+				var ver = "?ver="
+				var dateRandomizer = Math.floor(Date.now() / 1000);
+				var indexVer = ver + dateRandomizer;
+				var logoVer = ver + "1";
+    </script>
+</head>
+
+<body>
+	<a href="http://www.bakermckenzie.link" target="_blank"><div id="logoCon"></div></a>
+	<iframe id="ecardFrame" src="" frameborder="0" align="middle"></iframe>
+	<div id="footerCon"></div>
+    <script type="text/javascript">
+				document.getElementById('ecardFrame').src = "Main.html" + indexVer;
+    </script>
+</body>
+</html>
